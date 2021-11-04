@@ -1,0 +1,277 @@
+.navbar-trans {
+  width: 100%;
+  position: fixed;
+  z-index: 3;
+  background-color: white;
+  color: #dfdfdf;
+  padding: 30px 0;
+}
+
+nav a {
+  color: inherit;
+}
+
+nav a:hover {
+  color: inherit;
+}
+
+.scrolled {
+  background-color: #FFFFFF !important;
+  color: #343434 !important;
+  top: -20px;
+  transition: background-color 1s linear, top 2s linear;
+}
+
+nav .brand {
+  margin-left: 20px;
+}
+
+nav .brand #nav-logo {
+  width: 100px;
+  float: left;
+  padding: 10px;
+}
+
+nav .brand #nav-title {
+  margin-top: 10px;
+  margin-left: 12px;
+  padding: 10px;
+  display: block;
+  width: 200px;
+  text-decoration: none;
+}
+
+nav .brand #nav-title h3 {
+  text-decoration: none;
+  color: inherit;
+  line-height: 16px;
+  font-size: 27px;
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+nav .brand #nav-title h3:hover {
+  text-decoration: none;
+  font-size: 30px;
+}
+
+nav .right-menu {
+  margin-right: 30px;
+}
+
+nav .navbar-nav .nav-item .nav-link {
+  font-family: "Helvetica Neue", sans-serif;
+  color: gray;
+  font-weight: 400;
+  text-decoration: none;
+  margin: 0 30px;
+  text-decoration: underline 0.15em rgb(255, 87, 90, 0);
+  transition: text-decoration-color 300ms;
+}
+
+nav .navbar-nav .nav-item .nav-link:hover {
+  text-decoration: underline 0.15em #ffae00;
+}
+
+nav .navbar input {
+  display: none;
+}
+
+nav .open {
+  background-color: #dfdfdf;
+  width: 24px;
+  height: 4px;
+  display: block;
+  border-radius: 2px;
+  cursor: pointer;
+  position: absolute;
+  top: 8px;
+}
+
+nav .open:before {
+  content: "";
+  background-color: #dfdfdf;
+  width: 24px;
+  height: 4px;
+  display: block;
+  border-radius: 2px;
+  position: relative;
+  top: -8px;
+  transform: rotate(0deg);
+  transition: all 0.3s ease;
+}
+
+nav .open:after {
+  content: "";
+  background-color: #dfdfdf;
+  width: 24px;
+  height: 4px;
+  display: block;
+  border-radius: 2px;
+  position: relative;
+  top: 4px;
+  transform: rotate(0deg);
+  transition: all 0.3s ease;
+}
+
+nav .menuOpen {
+  width: 24px;
+  height: 20px;
+  display: none;
+  margin-top: 25px;
+  margin-right: 5px;
+  padding-bottom: 25px;
+  cursor: pointer;
+  position: absolute;
+  right: 25px;
+}
+
+nav .menuOpen:hover .open:before {
+  top: -9px;
+}
+
+nav .menuOpen:hover .open:after {
+  top: 5px;
+}
+
+nav .menu {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+nav .menu label {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background-size: 100%;
+  cursor: pointer;
+}
+
+nav .menu .menuContent {
+  position: relative;
+  top: 33vh;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+nav .menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+}
+
+nav .menu ul li a {
+  display: block;
+  color: #FFFFFF;
+  text-decoration: none;
+  transition: color 0.2s;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 6vh;
+  text-transform: lowercase;
+  padding: 10px 0;
+}
+
+nav .menu ul li:hover {
+  font-weight: bold;
+  -webkit-transition: font-weight 0.5s ease-in-out;
+  -ms-transition: font-weight 0.5s ease-in-out;
+  transition: font-weight 0.5s ease-in-out;
+}
+
+nav .menuEffects {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
+}
+
+nav .menuEffects ul {
+  transform: translateY(0%);
+  transition: all 0.5s;
+}
+
+nav #menuToggle {
+  display: none;
+}
+
+nav #menuToggle:checked ~ .menuEffects {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s;
+}
+
+nav #menuToggle:checked ~ .menuEffects ul {
+  opacity: 1;
+}
+
+nav #menuToggle:checked ~ .menuOpen .open {
+  background-color: transparent;
+}
+
+nav #menuToggle:checked ~ .menuOpen .open:before {
+  content: "";
+  background-color: #dfdfdf;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+nav #menuToggle:checked ~ .menuOpen .open:after {
+  content: "";
+  background-color: #dfdfdf;
+  transform: rotate(-45deg);
+  position: relative;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+nav #menuToggle:not(:checked) ~ .menuEffects ul {
+  transform: translateY(-30%);
+}
+
+@media only screen 
+and (max-width : 991px) {
+  nav .menuOpen {
+      display: block;
+  }
+}
+
+@media only screen 
+and (max-width : 380px) {
+
+  nav .brand #nav-logo {
+      width: 40px;
+      padding: 5px;
+  }
+
+  nav .brand #nav-title {
+      margin-top: 0;
+  }
+
+  nav .brand #nav-title h3 {
+      font-size: 15px;
+  }
+
+  nav .brand #nav-title h3:hover {
+      font-size: 18px;
+  }
+
+  nav .right-menu {
+      margin-top: 10px;
+  }
+
+  nav .brand {
+      margin-top: 10px;
+  }
+
+  nav .menuOpen {
+      margin-top: 5px;
+  }
+}

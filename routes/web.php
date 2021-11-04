@@ -14,5 +14,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('landing');
+});
+
+Route::get('/bg', function () {
+    return view('bg');
+});
+
+Route::get('/mcm', function () {
+    return view('mcm');
+});
+
+Route::get('/mib', function () {
+    return view('mib');
 });

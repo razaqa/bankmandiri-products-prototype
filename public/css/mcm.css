@@ -1,0 +1,155 @@
+/* header */
+
+.headline-pict {
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    width: 100vw;
+    height: 70vh;
+}
+
+.headline-pict::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70vh;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    filter: brightness(50%);
+}
+
+.headline-inside {
+    position: relative;
+}
+
+.headline {
+    overflow: hidden;
+    position: relative;
+}
+
+.headline-texts {
+    margin-top: 35vh;
+}
+
+.headline-text {
+    position: relative;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    letter-spacing: 4px;
+    overflow: hidden;
+    background: linear-gradient(90deg, #FFFFFF, #FFFFFF, #FFFFFF);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(121, 11, 11, 0);
+}
+
+#headline-text1 {
+    animation: shadow-transition1 10s linear infinite;
+    font-weight: bold;
+    font-size: 38px;
+}
+
+#headline-text2 {
+    animation: shadow-transition2 10s linear infinite;
+    font-size: 24px;
+}
+
+@keyframes shadow-transition1 {
+    0% {
+        background-position: -500%;
+    }
+    
+    30% {
+        background-position: 0%;
+    }
+
+    80% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: 500%;
+    }
+}
+
+
+@keyframes shadow-transition2 {
+    0% {
+        background-position: -500%;
+    }
+    
+    10% {
+        background-position: -500%;
+    }
+
+    80% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: 500%;
+    }
+}
+
+
+@media only screen 
+and (max-width : 610px) {
+    #headline-text1 {
+        font-size: 22px;
+    }
+
+    #headline-text2 {
+        font-size: 12px;
+    }
+}
+
+@media only screen 
+and (max-width : 380px) {
+    #headline-text1 {
+        font-size: 18px;
+    }
+
+    #headline-text2 {
+        font-size: 7px;
+    }
+}
+
+/* products */
+
+.overview {
+    margin-top: 50px;
+}
+
+.topic-hat {
+    margin-left: 0;
+    width: 75px;
+    height: 5px !important;
+    border-width: 0;
+    border-radius: 10px;
+    color: #ffae00;
+    background-color: #ffae00;
+    opacity: 1;
+}
+
+.topic h2 {
+    font-family: "Helvetica Neue", sans-serif;
+    font-style: normal;
+    line-height: 52px;
+}
+
+.topic p {
+    font-family: "Helvetica Neue", sans-serif;
+}
+
+.mdr-article {
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 50px;
+}
+
+h3 {
+    font-family: "Helvetica Neue", sans-serif;
+}

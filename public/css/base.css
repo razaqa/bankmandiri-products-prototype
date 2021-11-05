@@ -1,8 +1,13 @@
 @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 a:hover {
     text-decoration: none;
-    color: black;
+    color: inherit;
 }
 
 .content {

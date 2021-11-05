@@ -4,3 +4,7 @@ a:hover {
     text-decoration: none;
     color: black;
 }
+
+.content {
+    margin-bottom: 100px;
+}

@@ -142,7 +142,12 @@ and (max-width : 380px) {
 }
 
 .topic p {
-    font-family: "Helvetica Neue", sans-serif;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+}
+
+.topic .quotes {
+    font-size: 20px;
 }
 
 .mdr-article {
@@ -152,4 +157,22 @@ and (max-width : 380px) {
 
 h3 {
     font-family: "Helvetica Neue", sans-serif;
+}
+
+h4 {
+    font-family: "Helvetica Neue", sans-serif;
+}
+
+.submit-btn {
+    text-align: center;
+    background-color: #ffae00;
+    font-family: "Poppins", sans-serif;
+    padding-left: 30px;
+    padding-right: 30px;
+    border: none;
+    margin-bottom: 20px;
+}
+
+.submit-btn:hover {
+    background-color: #c79220;
 }
